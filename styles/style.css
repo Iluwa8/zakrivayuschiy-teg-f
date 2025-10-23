@@ -11,6 +11,319 @@
 */
 
 .page {
+  display: grid;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  color: var(--color);
+  font-family: var(--main-font-family), sans-serif;
+  font-variation-settings: "wght" var(--wght);
+  font-size: var(--font-size);
+  background-image: var(--main-background-image);
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: var(--page-bg-color);
+  padding-block-start: 100px;
+}
+
+/*______________________________________________________________
+
+Header
+  ______________________________________________________________
+*/
+
+.header {
+  display: grid;
+  width: 100%;
+  border: 2px solid var(--contour-color);
+  background-color: var(--page-bg-color);
+  max-inline-size: 696px;
+  margin: 0 auto;
+}
+
+.header__head-text {
+  display: block;
+  font-family: var(--accent-font), fantasy;
+  font-size: var(--header-title-size);
+  margin-block-start: clamp(122px, calc(0.00751 * 100vw + 119.18px), 130px);
+  align-items: center;
+  justify-items: center;
+  margin-block-end: 20px;
+  text-align: center;
+}
+
+.header__text {
+  display: grid;
+  max-inline-size: 696px;
+  width: 100%;
+  font-family: var(--accent-font), fantasy;
+  font-size: var(--header-text-size);
+  text-align: center;
+  align-content: center;
+  text-transform: uppercase;
+  margin-block-end: clamp(122px, calc(0.00751 * 100vw + 119.18px), 130px);
+}
+
+/*______________________________________________________________
+
+Header
+  ______________________________________________________________
+*/
+
+/*______________________________________________________________
+
+Main
+  ______________________________________________________________
+*/
+.main {
+  display: grid;
+  width: 100%;
+  gap: 50px;
+  margin-inline-start: 370px;
+  margin-inline-end: 370px;
+  margin-block-start: 98px;
+}
+
+.main__article {
+  display: grid;
+  justify-content: center;
+  max-inline-size: 696px;
+  border: 2px solid var(--contour-color);
+  background-color: var(--page-bg-color);
+}
+
+.article-header {
+  padding: 5px 10px;
+}
+
+.article-text-container {
+  display: grid;
+  gap: 25px;
+  margin: 25px;
+}
+
+.like-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  inline-size: 179px;
+  block-size: 38px;
+  margin-inline-start: 502px;
+  margin-block-end: 25px;
+}
+
+.like-icon {
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+
+.button {
+  background-color: #fff;
+  font-family: var(--accent-font), fantasy;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 90%;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.card__like-button {
+  padding: 9px 17px;
+  width: 130px;
+  height: 38px;
+  margin-inline-start: 7px;
+}
+
+.save-button {
+  width: 335px;
+  min-block-size: 55px;
+  margin-inline: 182.5px;
+}
+
+.image-span {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--accent-font), fantasy;
+  text-shadow: -1px 0 var(--page-bg-color), 1px 0 var(--page-bg-color), 0 -1px var(--page-bg-color), 0 1px var(--page-bg-color);
+  font-size: 14px;
+  color: var(--color);
+  opacity: .5;
+}
+
+.image-sepia {
+  filter: sepia(1);
+}
+.image-grayscale {
+  filter: grayscale(1);
+}
+.image-contrast {
+  filter: contrast(1.5);
+}
+.image-blur {
+  filter: blur(3px);
+}
+.image-bright {
+  filter: brightness(1.3);
+}
+.image-saturate {
+  filter: saturate(2);
+}
+.image-hue {
+  filter: hue-rotate(90deg) saturate(1.5);
+}
+
+.image-invert {
+  filter: invert(100%);
+}
+
+/*чтобы увидеть прикольчики, раскомментируй стили и картинки в HTML я повставлял мемов, но они не проходят по макету, поэтому так :)*/
+/* .druz-image {
+  filter: invert(100%);
+}
+
+.griffin-cry-image {
+  filter: hue-rotate(90deg) saturate(1.5);
+}
+
+.garold-image {
+  filter: grayscale(1);
+}
+
+.marry-image {
+  filter: sepia(1);
+}
+
+.scrat-image {
+  filter: contrast(150%);
+}
+
+.tony-image {
+  filter: brightness(130%) contrast(100%);
+}
+
+.frai-image {
+  filter: blur(3px) brightness(110%) invert(80%);
+}
+
+.griffin-image {
+  filter: contrast(150%);
+} */
+
+.article-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-fit: contain; */
+  object-position: center;
+  aspect-ratio: 1/1;
+}
+
+.article-image-container {
+  position: relative;
+}
+
+/*______________________________________________________________
+
+Main
+  ______________________________________________________________
+*/
+
+/*______________________________________________________________
+
+Popup window
+  ______________________________________________________________
+*/
+
+.dialog[open] {
+  border: 2px solid #000;
+  padding: 30px;
+  width: 353px;
+  height: 191px;
+  font-family: var(--accent-font), fantasy;
+}
+
+.dialog::backdrop {
+  background: rgba(0, 0, 0, .7);
+}
+
+.dialog-message {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dialog-icon {
+  margin-block-start: 12px;
+}
+
+.dialog-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  margin-block-end: 30px;
+  max-inline-size: 234px;
+}
+
+.dialog-button {
+  min-inline-size: 293px;
+  padding: 9px 17px;
+}
+
+/*______________________________________________________________
+
+Popup window
+  ______________________________________________________________
+*/
+
+@supports ((text-stroke: 1px var(--page-bg-color)) or (-webkit-text-stroke: 1px var(--page-bg-color))) {
+
+  .image-span {
+    -webkit-text-stroke: 1px var(--page-bg-color);
+    text-shadow: none;
+    text-stroke: 1px var(--page-bg-color);
+  }
+}
+
+@supports (mix-blend-mode: difference) {
+  .button .button__text {
+    transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__text {
+    font-size: var(--hero-subtitle);
+  }
+
+  .header__head-text {
+    font-size: var(--hero-title);
+  }
+
+  .save-button {
+    flex-direction: column;
+  }
+
+  .button__icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .dialog-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .dialog[open] {
+    padding: 30px 40px;
+  }
+
+  .dialog-message svg {
+    width: 39px;
+    height: 39px;
+    inline-size: 90px;
+  }
 }
