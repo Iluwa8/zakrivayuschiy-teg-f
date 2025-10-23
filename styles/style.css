@@ -78,8 +78,7 @@ Main
   display: grid;
   width: 100%;
   gap: 50px;
-  margin-inline-start: 370px;
-  margin-inline-end: 370px;
+  justify-content: center;
   margin-block-start: 98px;
 }
 
