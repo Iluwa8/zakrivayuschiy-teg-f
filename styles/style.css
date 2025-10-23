@@ -110,7 +110,7 @@ Main
   margin-block-end: 25px;
 }
 
-.like-icon {
+.card__icon-button {
   align-items: center;
   justify-content: center;
   background-color: transparent;
