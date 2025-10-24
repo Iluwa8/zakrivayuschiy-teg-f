@@ -49,6 +49,7 @@ Header
   justify-items: center;
   margin-block-end: 20px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .header__text {
@@ -92,6 +93,7 @@ Main
 
 .article-header {
   padding: 5px 10px;
+  font-size: 18px;
 }
 
 .article-text-container {
@@ -102,11 +104,10 @@ Main
 
 .like-buttons-container {
   display: flex;
-  justify-content: space-between;
-  inline-size: 179px;
-  block-size: 38px;
-  margin-inline-start: 502px;
-  margin-block-end: 25px;
+  justify-content: end;
+  align-items: center end;
+  padding-inline-end: 25px;
+  padding-block-end: 25px;
 }
 
 .card__icon-button {
@@ -130,7 +131,7 @@ Main
   padding: 9px 17px;
   width: 130px;
   height: 38px;
-  margin-inline-start: 7px;
+  /* margin-inline-start: 7px; */
 }
 
 .save-button {
