@@ -189,6 +189,10 @@ Main
   color: var(--button-text-color);
 }
 
+.button:focus-visible {
+  border-color: var(--border-color, #000);
+}
+
 .card__like-button {
   padding: 9px 17px;
   width: 130px;
