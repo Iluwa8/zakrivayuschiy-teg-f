@@ -114,11 +114,11 @@ Main
 }
 
 .card__icon-button {
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border: none;
-  padding-inline-end: 10px;
+  display: flex;
+  background: transparent;
+  color: var(--color);
+  cursor: pointer;
+  margin: 0;
   box-sizing: border-box;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
@@ -132,14 +132,27 @@ Main
   border-color: var(--border-color, #000);
 }
 
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--text-color, #000);
+}
+
+.card__button {
+  display: flex;
+  gap: 5px;
+  justify-content: end;
+}
+
 .button {
   box-sizing: border-box;
   display: flex;
   position: relative;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   cursor: pointer;
-  font-family: var(--accent-font);
   border: 2px solid var(--border-color);
   background: var(--button-text-color);
   transition: box-shadow 0.3s ease;
@@ -164,15 +177,10 @@ Main
   width: 100%;
 }
 
-.card__like-button {
-  width: 130px;
-  min-height: 38px;
-}
-
 .button__text {
   font-size: var(--button-size);
   color: var(--button-text-color);
-  font-family: var(--font-accent), fantasy;
+  font-family: var(--accent-font), fantasy;
   mix-blend-mode: difference;
 }
 
@@ -187,10 +195,9 @@ Main
 
 .button:hover svg {
   color: var(--button-text-color);
-}
-
-.button:focus-visible {
-  border-color: var(--border-color, #000);
+  /* stroke: white;
+  mix-blend-mode: difference; */
+  /* mix-blend-mode: difference; */
 }
 
 .card__like-button {
