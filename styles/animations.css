@@ -16,7 +16,7 @@
     transform: scale(1);
   }
   95% {
-    transform: scale(1.5);
+    transform: scale(1.25);
   }
   100% {
     transform: scale(1);
@@ -90,5 +90,9 @@
 }
 
 .like-icon.is-liked {
-  animation: heartBeat 0.5s ease-in-out alternate;
+  animation: heartbeat 0.3s ease-in;
+}
+
+.like-icon {
+  transform-origin: center;
 }
