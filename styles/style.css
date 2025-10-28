@@ -190,14 +190,12 @@ Main
 
 .button svg {
   stroke: white;
+  stroke-width: .5px;
   mix-blend-mode: difference;
 }
 
 .button:hover svg {
   color: var(--button-text-color);
-  /* stroke: white;
-  mix-blend-mode: difference; */
-  /* mix-blend-mode: difference; */
 }
 
 .card__like-button {
